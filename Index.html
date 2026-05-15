@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshMarket</title>
+  <link rel="stylesheet" href="Style.css" />
+</head>
+
+<body>
+
+<header>
+  <h1>FreshMarket</h1>
+
+  <div class="CartIcon">
+    🛒 <span id="CartCount">0</span>
+  </div>
+</header>
+
+<main>
+
+  <section class="Products" id="Products"></section>
+
+  <aside class="Cart">
+
+    <h2>El teu carret</h2>
+
+    <div id="CartItems"></div>
+
+    <div class="CartFooter">
+
+      <h3>Total: €<span id="Total">0</span></h3>
+
+      <button onclick="OpenCheckout()">
+        Finalitzar Compra
+      </button>
+
+    </div>
+
+  </aside>
+
+</main>
+
+<div class="Modal" id="CheckoutModal">
+
+  <div class="ModalContent">
+
+    <div class="ModalHeader">
+
+      <h2>Finalitzar Compra</h2>
+
+      <button onclick="CloseCheckout()" class="CloseButton">✕</button>
+
+    </div>
+
+    <form id="CheckoutForm">
+
+      <div class="CheckoutSection">
+
+        <h3>Dades</h3>
+
+        <input type="text" placeholder="Nom complet" required />
+        <input type="email" placeholder="Email" required />
+        <input type="text" placeholder="Adreça" required />
+        <input type="text" placeholder="Ciutat" required />
+        <input type="text" placeholder="Codi Postal" required />
+
+      </div>
+
+      <div class="CheckoutSection">
+
+        <h3>Pagament</h3>
+
+        <input type="text" placeholder="Nom targeta" required />
+        <input type="text" placeholder="Número targeta" maxlength="19" required />
+
+        <div class="CardRow">
+          <input type="text" placeholder="MM/AA" maxlength="5" required />
+          <input type="text" placeholder="CVV" maxlength="3" required />
+        </div>
+
+      </div>
+
+      <button type="submit">Confirmar Comanda</button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<script src="Application.js"></script>
+
+</body>
+</html>
